@@ -1,210 +1,2015 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+const products = [
+  {
+    name: "Sliced Eghee Bread",
+    description: "Pre-sliced convenience with our signature golden, fluffy texture. Perfect for toast and sandwiches.",
+    emoji: "🍞",
+  },
+  {
+    name: "Pure Ghee",
+    description: "Artisanal clarified butter, slow-churned for a rich, nutty flavor. The secret ingredient in every Eghee loaf.",
+    emoji: "🧈",
+  },
+];
+
+const features = [
+  {
+    icon: "🥚",
+    title: "100% Egg-Based",
+    description: "Made with farm-fresh eggs, no fillers or artificial ingredients",
+  },
+  {
+    icon: "🌾",
+    title: "Zero Flour",
+    description: "Completely grain-free and gluten-free alternative to traditional bread",
+  },
+  {
+    icon: "🧈",
+    title: "Enriched with Ghee",
+    description: "Pure clarified butter for rich flavor and healthy fats",
+  },
+  {
+    icon: "💪",
+    title: "High Protein",
+    description: "Packed with protein to keep you satisfied longer",
+  },
+];
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+<div class="landing-page">
+  <!-- Decorative Background Elements -->
+  <div class="bg-gradient"></div>
+  <div class="bg-noise"></div>
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
-	<a href="https://astro.build/blog/astro-6-beta/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 6.0?</h2>
-		<p>
-			Redesigned dev server, fonts, live collections, built-in CSP support, and more! Click to
-			explore Astro 6.0's new features.
-		</p>
-	</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="20" cy="25" rx="18" ry="22" fill="url(#egg-gradient)" />
+            <ellipse cx="20" cy="25" rx="14" ry="18" fill="#FEF3C7" opacity="0.6" />
+            <defs>
+              <linearGradient id="egg-gradient" x1="2" y1="0" x2="38" y2="50">
+                <stop stop-color="#FCD34D" />
+                <stop offset="1" stop-color="#F59E0B" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">Eghee</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Benefits</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="btn-nav">Order Now</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-in">
+        <span class="dot"></span>
+        <span>Artisanal • Small Batch • Fresh Daily</span>
+      </div>
+      <h1 class="hero-title animate-slide-up">
+        Bread
+        <span class="ampersand">&</span>
+        <br />
+        <span class="highlight">Reinvented</span>
+      </h1>
+      <p class="hero-subtitle animate-slide-up-delay">
+        The revolutionary bread made from <strong>eggs</strong> and enriched with <strong>ghee</strong>.
+        Zero flour, zero gluten, zero compromise on taste.
+      </p>
+      <div class="hero-cta animate-slide-up-delay-2">
+        <a href="#contact" class="btn-primary">
+          <span>Try Eghee Today</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#products" class="btn-secondary">View Products</a>
+      </div>
+      <div class="hero-badges animate-fade-in-delay">
+        <span class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Gluten-Free
+        </span>
+        <span class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          Keto-Friendly
+        </span>
+        <span class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          High Protein
+        </span>
+        <span class="badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          Grain-Free
+        </span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="bread-showcase">
+        <div class="glow-ring"></div>
+        <div class="bread-circle">
+          <div class="bread-visual">
+            <div class="bread-ring ring-1"></div>
+            <div class="bread-ring ring-2"></div>
+            <div class="bread-ring ring-3"></div>
+            <div class="bread-center">
+              <span class="bread-emoji">🍞</span>
+              <div class="bread-label">
+                <span class="label-line">Made with</span>
+                <span class="label-highlight">EGGS + GHEE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-ingredient ingredient-1">🥚</div>
+        <div class="floating-ingredient ingredient-2">🧈</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Choose Eghee?</span>
+        <h2 class="section-title">A Better Bread for a Healthier You</h2>
+        <p class="section-subtitle">
+          Traditional bread meets modern nutrition. We've reimagined bread from the ground up.
+        </p>
+      </div>
+      <div class="features-grid">
+        {features.map((feature, index) => (
+          <div class="feature-card" style={`--delay: ${index * 0.1}s`}>
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon">{feature.icon}</span>
+            </div>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+            <div class="feature-decoration"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Products</span>
+        <h2 class="section-title">Find Your Perfect Eghee</h2>
+        <p class="section-subtitle">
+          Choose the perfect Eghee for your lifestyle
+        </p>
+      </div>
+      <div class="products-grid">
+        {products.map((product, index) => (
+          <div class="product-card" style={`--delay: ${index * 0.15}s`}>
+            <div class="product-image">
+              <div class="image-placeholder">
+                <span class="product-emoji">{product.emoji}</span>
+                <div class="image-glow"></div>
+              </div>
+              {index === 0 && <div class="product-badge">Best Seller</div>}
+            </div>
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+            <a href="#contact" class="btn-product">
+              Order Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title-left">From Our Kitchen to Yours</h2>
+          <p class="about-text">
+            Eghee began with a simple question: <strong>What if bread could be nutritious?</strong>
+          </p>
+          <p class="about-text">
+            We're a small family business passionate about creating food that nourishes.
+            By combining the protein-rich goodness of eggs with the ancient wisdom of ghee,
+            we've created a bread that breaks all the rules—in the best way possible.
+          </p>
+          <p class="about-text">
+            No flour. No gluten. No compromises. Just pure, wholesome ingredients
+            transformed into something extraordinary.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-number" data-count="0">0</span>
+              <span class="stat-unit">g</span>
+              <span class="stat-label">Flour</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="100">100</span>
+              <span class="stat-unit">%</span>
+              <span class="stat-label">Natural</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="12">12</span>
+              <span class="stat-unit">g</span>
+              <span class="stat-label">Protein</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="visual-frame">
+            <div class="frame-inner">
+              <div class="ingredient-showcase">
+                <div class="ingredient-stack">
+                  <span class="ingredient-icon large">🥚</span>
+                  <span class="plus">+</span>
+                  <span class="ingredient-icon large">🧈</span>
+                  <span class="equals">=</span>
+                  <span class="ingredient-icon large result">🍞</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="testimonial-box">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">
+          I never thought I'd be able to enjoy bread again on my keto diet.
+          Eghee has been a game-changer for my family. The taste is incredible,
+          and I feel good about what we're eating.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <span>👩‍🍳</span>
+          </div>
+          <div class="author-info">
+            <span class="author-name">Sarah M.</span>
+            <span class="author-title">Happy Customer since 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-content">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title-left">Ready to Try Eghee?</h2>
+          <p class="contact-subtitle">
+            We're a small business with big dreams. Reach out to place an order
+            or learn more about our products.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.887.323 1.76.584 2.61a2 2 0 01-.45 1.89l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 011.89-.45c.85.261 1.723.457 2.61.584a2 2 0 011.72 2.02z" />
+                </svg>
+              </span>
+              <div>
+                <span class="contact-label">Call Us</span>
+                <a href="tel:+15551234567">(555) 123-4567</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <div>
+                <span class="contact-label">Email Us</span>
+                <a href="mailto:hello@eghee.com">hello@eghee.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </span>
+              <div>
+                <span class="contact-label">Location</span>
+                <span>Local Pickup & Delivery Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder=" " required />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder=" " required />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <select id="product" required>
+                <option value="" disabled selected></option>
+                <option value="classic">Classic Eghee</option>
+                <option value="rolls">Eghee Rolls</option>
+                <option value="loaf">Eghee Loaf</option>
+              </select>
+              <label for="product">Select Product</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" placeholder=" " rows="4" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn-primary btn-submit">
+              <span>Send Message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon-small">
+            <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="20" cy="25" rx="18" ry="22" fill="#FCD34D" />
+            </svg>
+          </span>
+          <span class="logo-text">Eghee</span>
+        </div>
+        <p class="footer-tagline">Bread reinvented for the health-conscious</p>
+        <div class="footer-links">
+          <a href="#features">Benefits</a>
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="18" cy="6" r="1.5" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+        </div>
+        <p class="copyright">&copy; {new Date().getFullYear()} Eghee. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
+  /* ============================================
+     CSS VARIABLES & BASE STYLES
+     ============================================ */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
+  :root {
+    /* Colors - Warm, organic palette inspired by eggs and ghee */
+    --color-egg-yolk: #F59E0B;
+    --color-egg-yolk-light: #FBBF24;
+    --color-egg-yolk-dark: #D97706;
+    --color-ghee: #FEF3C7;
+    --color-ghee-dark: #FDE68A;
+    --color-cream: #FFFBEB;
+    --color-cream-dark: #FFF7ED;
+    --color-white: #FFFFFF;
+    --color-charcoal: #1C1917;
+    --color-stone: #44403C;
+    --color-stone-light: #78716C;
+    --color-border: #E7E5E4;
 
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
 
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
+    /* Border Radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-full: 9999px;
 
-	#links {
-		display: flex;
-		gap: 16px;
-	}
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(28, 25, 23, 0.1), 0 2px 4px -1px rgba(28, 25, 23, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(28, 25, 23, 0.1), 0 4px 6px -2px rgba(28, 25, 23, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(28, 25, 23, 0.1), 0 10px 10px -5px rgba(28, 25, 23, 0.04);
+    --shadow-glow: 0 0 40px rgba(245, 158, 11, 0.3);
 
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
+  html {
+    scroll-behavior: smooth;
+    cursor: none;
+  }
 
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
+  body {
+    font-family: var(--font-body);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    background: var(--color-cream);
+    overflow-x: hidden;
+  }
 
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
+  /* Custom Cursor */
+  html {
+    cursor: none !important;
+  }
 
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
+  body {
+    cursor: none !important;
+  }
 
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
+  * {
+    cursor: none !important;
+  }
 
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
+  .cursor-dot,
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999999;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
 
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
+  .cursor-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--color-egg-yolk);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  }
 
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
+  .cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-egg-yolk);
+    background: rgba(245, 158, 11, 0.05);
+    transition: all 0.15s ease-out;
+  }
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
+  .cursor-outline.hovered {
+    width: 60px;
+    height: 60px;
+    background: rgba(245, 158, 11, 0.15);
+    border-color: var(--color-egg-yolk-dark);
+  }
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
+  @media (max-width: 768px) {
+    html,
+    body,
+    * {
+      cursor: auto !important;
+    }
+    .cursor-dot,
+    .cursor-outline {
+      display: none !important;
+    }
+  }
 
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+  }
 
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
+  /* ============================================
+     BACKGROUND EFFECTS
+     ============================================ */
+  .bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(251, 191, 36, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 40% 60%, rgba(254, 243, 199, 0.3) 0%, transparent 40%);
+    z-index: -3;
+    pointer-events: none;
+  }
 
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
+  .bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    z-index: -2;
+    pointer-events: none;
+  }
 
-		#links {
-			flex-wrap: wrap;
-		}
+  .floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
 
-		#links a.button {
-			padding: 14px 18px;
-		}
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-ghee), var(--color-egg-yolk-light));
+    opacity: 0.1;
+    animation: float 20s ease-in-out infinite;
+  }
 
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
+  .shape-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    animation-delay: 0s;
+  }
 
-		h1 {
-			line-height: 1.5;
-		}
-	}
+  .shape-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -50px;
+    animation-delay: -7s;
+  }
+
+  .shape-3 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    animation-delay: -14s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(30px, -30px) rotate(90deg); }
+    50% { transform: translate(-20px, 20px) rotate(180deg); }
+    75% { transform: translate(20px, 30px) rotate(270deg); }
+  }
+
+  /* ============================================
+     NAVIGATION
+     ============================================ */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 251, 235, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(231, 229, 228, 0.5);
+    transition: var(--transition-base);
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 251, 235, 0.95);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg) var(--space-xl);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: var(--color-charcoal);
+    transition: var(--transition-base);
+  }
+
+  .logo:hover {
+    transform: scale(1.02);
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo-text {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--color-stone);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition-base);
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-egg-yolk);
+    transition: var(--transition-base);
+  }
+
+  .nav-links a:hover {
+    color: var(--color-egg-yolk-dark);
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .btn-nav {
+    background: linear-gradient(135deg, var(--color-egg-yolk), var(--color-egg-yolk-dark));
+    color: var(--color-white) !important;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-nav::after {
+    display: none;
+  }
+
+  .btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+  }
+
+  .mobile-menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-charcoal);
+    border-radius: 2px;
+    transition: var(--transition-base);
+  }
+
+  /* ============================================
+     HERO SECTION
+     ============================================ */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+    padding: 140px var(--space-xl) var(--space-3xl);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: var(--color-white);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-stone-light);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .hero-badge .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-egg-yolk);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xl);
+  }
+
+  .ampersand {
+    display: inline-block;
+    color: var(--color-egg-yolk);
+    font-style: italic;
+    margin: 0 var(--space-sm);
+  }
+
+  .highlight {
+    display: block;
+    background: linear-gradient(135deg, var(--color-egg-yolk), var(--color-egg-yolk-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-stone-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+    max-width: 540px;
+  }
+
+  .hero-subtitle strong {
+    color: var(--color-egg-yolk-dark);
+    font-weight: 600;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: linear-gradient(135deg, var(--color-egg-yolk), var(--color-egg-yolk-dark));
+    color: var(--color-white);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition-base);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+  }
+
+  .btn-primary svg {
+    transition: var(--transition-base);
+  }
+
+  .btn-primary:hover svg {
+    transform: translateX(4px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-white);
+    color: var(--color-charcoal);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    transition: var(--transition-base);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-egg-yolk);
+    color: var(--color-egg-yolk-dark);
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: var(--color-white);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-stone);
+    border: 1px solid var(--color-border);
+    transition: var(--transition-base);
+  }
+
+  .badge:hover {
+    border-color: var(--color-egg-yolk);
+    transform: translateY(-2px);
+  }
+
+  .badge svg {
+    color: var(--color-egg-yolk);
+  }
+
+  /* Hero Image */
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .bread-showcase {
+    position: relative;
+  }
+
+  .glow-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  }
+
+  .bread-circle {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--color-ghee), var(--color-cream));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+      var(--shadow-xl),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    position: relative;
+    animation: bread-float 6s ease-in-out infinite;
+  }
+
+  @keyframes bread-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .bread-visual {
+    position: relative;
+    width: 280px;
+    height: 280px;
+  }
+
+  .bread-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid rgba(245, 158, 11, 0.2);
+  }
+
+  .ring-1 { width: 100%; height: 100%; animation: rotate 20s linear infinite; }
+  .ring-2 { width: 80%; height: 80%; animation: rotate 15s linear infinite reverse; }
+  .ring-3 { width: 60%; height: 60%; animation: rotate 10s linear infinite; }
+
+  @keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .bread-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .bread-emoji {
+    font-size: 72px;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  }
+
+  .bread-label {
+    margin-top: var(--space-sm);
+  }
+
+  .label-line {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-stone-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .label-highlight {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-egg-yolk-dark);
+  }
+
+  .floating-ingredient {
+    position: absolute;
+    font-size: 40px;
+    animation: ingredient-float 4s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  }
+
+  .ingredient-1 {
+    top: 20px;
+    right: 40px;
+    animation-delay: 0s;
+  }
+
+  .ingredient-2 {
+    bottom: 40px;
+    left: 20px;
+    animation-delay: -2s;
+  }
+
+  @keyframes ingredient-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+  }
+
+  /* Hero Animations */
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out 0.2s forwards;
+  }
+
+  .animate-slide-up-delay {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out 0.4s forwards;
+  }
+
+  .animate-slide-up-delay-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out 0.6s forwards;
+  }
+
+  .animate-fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.8s forwards;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============================================
+     SECTION STYLES
+     ============================================ */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-egg-yolk-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-md);
+    padding: var(--space-xs) var(--space-lg);
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: var(--radius-full);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-title-left {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-lg);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-stone-light);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* ============================================
+     FEATURES SECTION
+     ============================================ */
+  .features {
+    padding: var(--space-3xl) 0;
+    background: var(--color-white);
+    position: relative;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .feature-card {
+    position: relative;
+    text-align: center;
+    padding: var(--space-2xl);
+    background: var(--color-cream);
+    border-radius: var(--radius-xl);
+    transition: var(--transition-base);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+    border: 1px solid transparent;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(245, 158, 11, 0.3);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .feature-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .feature-card p {
+    color: var(--color-stone-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .feature-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto var(--space-lg);
+    background: linear-gradient(135deg, var(--color-ghee), var(--color-egg-yolk-light));
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+  }
+
+  .feature-icon {
+    font-size: 32px;
+  }
+
+  .feature-decoration {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============================================
+     PRODUCTS SECTION
+     ============================================ */
+  .products {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-ghee) 100%);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .product-card {
+    position: relative;
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    text-align: center;
+    transition: var(--transition-base);
+    border: 1px solid var(--color-border);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+    overflow: hidden;
+  }
+
+  .product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-egg-yolk-light), var(--color-egg-yolk), var(--color-egg-yolk-light));
+    opacity: 0;
+    transition: var(--transition-base);
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(245, 158, 11, 0.3);
+  }
+
+  .product-card:hover::before {
+    opacity: 1;
+  }
+
+  .product-image {
+    margin-bottom: var(--space-lg);
+    position: relative;
+  }
+
+  .product-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: linear-gradient(135deg, var(--color-egg-yolk), var(--color-egg-yolk-dark));
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    z-index: 10;
+    box-shadow: var(--shadow-md);
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(145deg, var(--color-ghee), var(--color-cream));
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-emoji {
+    font-size: 88px;
+    z-index: 1;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+  }
+
+  .image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .product-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .product-card p {
+    color: var(--color-stone-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .btn-product {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: var(--color-charcoal);
+    color: var(--color-white);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition-base);
+  }
+
+  .btn-product:hover {
+    background: var(--color-egg-yolk-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-product svg {
+    transition: var(--transition-base);
+  }
+
+  .btn-product:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* ============================================
+     ABOUT SECTION
+     ============================================ */
+  .about {
+    padding: var(--space-3xl) 0;
+    background: var(--color-white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+
+  .about-content .section-tag {
+    margin-bottom: var(--space-md);
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+    color: var(--color-stone-light);
+    line-height: 1.9;
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-text strong {
+    color: var(--color-egg-yolk-dark);
+    font-weight: 600;
+  }
+
+  .stats {
+    display: flex;
+    gap: var(--space-2xl);
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-egg-yolk);
+    line-height: 1;
+  }
+
+  .stat-unit {
+    font-size: 1.5rem;
+    color: var(--color-egg-yolk);
+    font-weight: 600;
+  }
+
+  .stat-label {
+    display: block;
+    color: var(--color-stone-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--space-xs);
+  }
+
+  .about-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .visual-frame {
+    width: 360px;
+    height: 360px;
+    background: linear-gradient(145deg, var(--color-ghee), var(--color-cream));
+    border-radius: var(--radius-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .visual-frame::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    animation: rotate 20s linear infinite;
+  }
+
+  .frame-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ingredient-showcase {
+    padding: var(--space-xl);
+  }
+
+  .ingredient-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .ingredient-icon {
+    font-size: 48px;
+    transition: var(--transition-base);
+  }
+
+  .ingredient-icon.large {
+    font-size: 64px;
+  }
+
+  .ingredient-icon.result {
+    animation: bread-glow 2s ease-in-out infinite;
+  }
+
+  .plus,
+  .equals {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--color-stone-light);
+    font-weight: 300;
+  }
+
+  @keyframes bread-glow {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.3)); }
+    50% { filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.6)); }
+  }
+
+  /* ============================================
+     TESTIMONIAL SECTION
+     ============================================ */
+  .testimonial {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(135deg, var(--color-ghee), var(--color-cream));
+  }
+
+  .testimonial-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .quote-icon {
+    font-family: var(--font-display);
+    font-size: 80px;
+    color: var(--color-egg-yolk-light);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: var(--space-lg);
+  }
+
+  .testimonial-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .author-avatar {
+    width: 56px;
+    height: 56px;
+    background: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .author-info {
+    text-align: left;
+  }
+
+  .author-name {
+    display: block;
+    font-weight: 600;
+    color: var(--color-charcoal);
+  }
+
+  .author-title {
+    font-size: 0.85rem;
+    color: var(--color-stone-light);
+  }
+
+  /* ============================================
+     CONTACT SECTION
+     ============================================ */
+  .contact {
+    padding: var(--space-3xl) 0;
+    background: var(--color-cream);
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .contact-content .section-tag {
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-stone-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .contact-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--color-egg-yolk-light), var(--color-egg-yolk));
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-icon-wrapper svg {
+    color: var(--color-white);
+  }
+
+  .contact-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-stone-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  .contact-item a {
+    color: var(--color-charcoal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-base);
+  }
+
+  .contact-item a:hover {
+    color: var(--color-egg-yolk-dark);
+  }
+
+  .contact-form-wrapper {
+    background: var(--color-white);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    background: var(--color-cream);
+    transition: var(--transition-base);
+    color: var(--color-charcoal);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-egg-yolk);
+    background: var(--color-white);
+  }
+
+  .form-group label {
+    position: absolute;
+    left: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-stone-light);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: var(--transition-base);
+    background: transparent;
+    padding: 0 var(--space-xs);
+  }
+
+  .form-group textarea ~ label {
+    top: var(--space-lg);
+    transform: none;
+  }
+
+  .form-group input:focus ~ label,
+  .form-group input:not(:placeholder-shown) ~ label,
+  .form-group select:focus ~ label,
+  .form-group select:not([value=""]) ~ label,
+  .form-group textarea:focus ~ label,
+  .form-group textarea:not(:placeholder-shown) ~ label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    background: var(--color-white);
+    color: var(--color-egg-yolk-dark);
+  }
+
+  .btn-submit {
+    justify-content: center;
+    margin-top: var(--space-md);
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  .footer {
+    background: var(--color-charcoal);
+    color: var(--color-white);
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .logo-icon-small {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-icon-small svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-brand .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .footer-tagline {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition-base);
+  }
+
+  .footer-links a:hover {
+    color: var(--color-egg-yolk-light);
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    transition: var(--transition-base);
+  }
+
+  .footer-social a:hover {
+    background: var(--color-egg-yolk);
+    transform: translateY(-3px);
+  }
+
+  .copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+  }
+
+  /* ============================================
+     RESPONSIVE DESIGN
+     ============================================ */
+  @media (max-width: 968px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding-top: 120px;
+      gap: var(--space-2xl);
+    }
+
+    .hero-content {
+      order: 1;
+    }
+
+    .hero-image {
+      order: 0;
+    }
+
+    .hero-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .hero-badges {
+      justify-content: center;
+    }
+
+    .bread-circle {
+      width: 300px;
+      height: 300px;
+    }
+
+    .bread-visual {
+      width: 220px;
+      height: 220px;
+    }
+
+    .bread-emoji {
+      font-size: 56px;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .about-visual {
+      order: -1;
+    }
+
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .stats {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .container {
+      padding: 0 var(--space-md);
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .section-title,
+    .section-title-left {
+      font-size: 2rem;
+    }
+
+    .features-grid,
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats {
+      flex-direction: column;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+
+    .visual-frame {
+      width: 280px;
+      height: 280px;
+    }
+
+    .ingredient-icon.large {
+      font-size: 48px;
+    }
+
+    .contact-form-wrapper {
+      padding: var(--space-lg);
+    }
+
+    .hero-badges {
+      gap: var(--space-xs);
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+    }
+  }
 </style>
+
+<script>
+  // Custom Cursor
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
+
+  if (cursorDot && cursorOutline && window.matchMedia('(min-width: 769px)').matches) {
+    // Initial position
+    cursorDot.style.left = '-10px';
+    cursorDot.style.top = '-10px';
+    cursorOutline.style.left = '-10px';
+    cursorOutline.style.top = '-10px';
+
+    window.addEventListener('mousemove', (e) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      // Dot follows cursor instantly
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+
+      // Outline follows with slight delay
+      setTimeout(() => {
+        cursorOutline.style.left = `${posX}px`;
+        cursorOutline.style.top = `${posY}px`;
+      }, 50);
+    });
+
+    // Add hover effect on interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .product-card, .feature-card');
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovered'));
+    });
+  }
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    navLinks?.classList.toggle('mobile-active');
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
